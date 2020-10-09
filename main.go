@@ -40,6 +40,15 @@ func main() {
 		}()
 
 		// Determine which challenge to run and run it
+		switch set {
+		case 1:
+			switch challenge {
+			case 1:
+				return s1c1()
+			case 2:
+				return s1c2()
+			}
+		}
 
 		return fmt.Errorf("challenge does not exist (s%d c%d)", challenge, set)
 	}
